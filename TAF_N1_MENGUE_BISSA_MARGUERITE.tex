@@ -1,0 +1,695 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french,english]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\geometry{margin=1in}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{float}
+\usepackage{hyperref}
+
+
+\geometry{left=18mm,right=18mm,top=18mm,bottom=18mm}
+
+\begin{document}
+	\thispagestyle{empty}
+	
+	
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[blue,line width=3pt]
+		($(current page.north west)+(1cm,-1cm)$) rectangle
+		($(current page.south east)+(-1cm,1cm)$);
+		\draw[blue,line width=0.8pt]
+		($(current page.north west)+(1.4cm,-1.4cm)$) rectangle
+		($(current page.south east)+(-1.4cm,1.4cm)$);
+	\end{tikzpicture}
+	
+	
+	\vspace*{0.3cm} 
+	\begin{center}
+		\begin{tabular}{m{0.40\textwidth} m{0.18\textwidth} m{0.40\textwidth}}
+		
+			\centering\small
+			\textbf{RÉPUBLIQUE DU CAMEROUN}\\
+			******\\
+			Paix -- Travail -- Patrie\\
+			******\\
+			\textbf{MINISTÈRE DE L'ENSEIGNEMENT SUPÉRIEUR}\\
+			******\\
+			\textbf{UNIVERSITÉ DE YAOUNDÉ I}\\
+			******\\
+			\textbf{ÉCOLE NATIONALE SUPÉRIEURE POLYTECHNIQUE}\\
+			******\\
+			\textbf{DÉPARTEMENT DE GÉNIE INFORMATIQUE}
+			&
+		
+			\centering
+			\raisebox{0.5cm}{\includegraphics[height=3cm]{ENSPY.jpg}} 
+			&
+			
+			\centering\small
+			\hspace{0.2cm} 
+			\textbf{REPUBLIC OF CAMEROON}\\
+			******\\
+			Peace -- Work -- Fatherland\\
+			******\\
+			\textbf{MINISTRY OF HIGHER EDUCATION}\\
+			******\\
+			\textbf{UNIVERSITY OF YAOUNDE I}\\
+			******\\
+			\textbf{NATIONAL ADVANCED SCHOOL OF ENGINEERING}\\
+			******\\
+			\textbf{COMPUTER ENGINEERING DEPARTMENT}
+		\end{tabular}
+	\end{center}
+	
+
+	\vspace{0.5cm}
+	\begin{center}
+		\fcolorbox{black}{white}{%
+			\parbox{0.9\textwidth}{%
+				\vspace{0.4cm}
+				\centering
+				\bfseries\fontsize{19pt}{22pt}\selectfont
+				INTRODUCTION AUX TECHNIQUES\\
+				D'INVESTIGATION NUMÉRIQUE
+				\vspace{0.4cm}
+		}}
+	\end{center}
+	
+
+	\vspace{0.8cm}
+	\begin{center}
+		\fcolorbox{black}{blue!40!black}{%
+			\parbox{0.9\textwidth}{%
+				\vspace{0.5cm}
+				\centering
+				\color{white}\bfseries\fontsize{25pt}{28pt}\selectfont
+			DEVOIR	ASSIMILATION DES CONCEPTS FONDAMENTAUX
+				\vspace{0.5cm}
+		}}
+	\end{center}
+	
+	
+	\vspace{0.8cm}
+	\begin{center}
+		\renewcommand{\arraystretch}{1.5} 
+		\begin{tabular}{|c|c|p{10cm}|c|}
+			\hline
+			\textbf{N°} & \textbf{MLE} & \textbf{NOMS ET PRÉNOMS} & \textbf{NOTE} \\ \hline
+			1 & 22P064 & MENGUE BISSA MARGUERITE & \\ \hline
+		\end{tabular}
+	\end{center}
+	
+
+	\vspace{1cm}
+	\begin{center}
+		\rule{0.6\textwidth}{0.6pt}\\
+		\textbf{Sous la supervision de : M.MINKA Thierry}\\
+		\rule{0.6\textwidth}{0.4pt}
+	\end{center}
+	
+
+	\vspace{0.7cm}
+	\begin{center}
+		\fcolorbox{black}{blue!40!black}{%
+			\parbox{0.65\textwidth}{%
+				\vspace{0.3cm}
+				\centering
+				\color{white}\bfseries\fontsize{15pt}{18pt}\selectfont
+				ANNÉE ACADÉMIQUE 2025 -- 2026
+				\vspace{0.3cm}
+		}}
+	\end{center}
+	
+	\vfill
+	\newpage
+	\thispagestyle{plain}
+	
+	{\Large
+		\section*{Partie 3: Révolution Quantique et Ses implications}\
+		Le qubit est :
+		\[
+		|\psi\rangle = \cos\frac{\pi}{6}|0\rangle + e^{i\pi/4}\sin\frac{\pi}{6}|1\rangle
+		\]
+		\subsection*{7. Calcul sur la sphère de BLOCH}\
+		\subsection*{Probabilités de mesure}\
+		
+		{Probabilité de mesurer } $|0\rangle$ :
+		\[
+		P(0) = |\langle 0|\psi\rangle|^2 = |\cos(\pi/6)|^2
+		\]
+		Or $\cos(\pi/6) = \frac{\sqrt{3}}{2}$, donc :
+		\[
+		P(0) = \left(\frac{\sqrt{3}}{2}\right)^2 = \frac{3}{4} = 0.75
+		\]
+		
+		{Probabilité de mesurer } $|1\rangle$ :
+		\[
+		P(1) = |\langle 1|\psi\rangle|^2 = |\sin(\pi/6)|^2
+		\]
+		Or $\sin(\pi/6) = \frac{1}{2}$, donc :
+		\[
+		P(1) = \left(\frac{1}{2}\right)^2 = \frac{1}{4} = 0.25
+		\]
+		
+		Vérification : 
+		\[
+		P(0) + P(1) = 0.75 + 0.25 = 1
+		\]
+		
+		\subsection*{Représentation sur la sphère de Bloch}\
+		
+		Pour un qubit :
+		\[
+		|\psi\rangle = \cos(\theta/2)|0\rangle + e^{i\phi}\sin(\theta/2)|1\rangle
+		\]
+		Les coordonnées sur la sphère de Bloch sont :
+		\[
+		x = \sin\theta \cos\phi, \quad y = \sin\theta \sin\phi, \quad z = \cos\theta
+		\]
+		
+		Ici, $\theta = \pi/3$ et $\phi = \pi/4$, donc :
+		\[
+		\sin(\pi/3) = \frac{\sqrt{3}}{2}, \quad \cos(\pi/3) = \frac{1}{2}, \quad \cos(\pi/4) = \sin(\pi/4) = \frac{\sqrt{2}}{2}
+		\]
+		
+		\[
+		x = \frac{\sqrt{3}}{2} \cdot \frac{\sqrt{2}}{2} = \frac{\sqrt{6}}{4} \approx 0.612
+		\]
+		\[
+		y = \frac{\sqrt{3}}{2} \cdot \frac{\sqrt{2}}{2} = \frac{\sqrt{6}}{4} \approx 0.612
+		\]
+		\[
+		z = \cos(\pi/3) = 0.5
+		\]
+		
+		Ainsi, le qubit est représenté par le point 
+		\[
+		(x, y, z) = (0.612, 0.612, 0.5)
+		\]
+		sur la sphère de Bloch.
+		
+		
+	
+		\tdplotsetmaincoords{70}{110} % angle de vue
+		
+		\begin{tikzpicture}[tdplot_main_coords, scale=5]
+			
+			% sphère de Bloch
+			\shade[ball color=blue!10!white, opacity=0.3] (0,0,0) circle (1);
+			
+			% axes
+			\draw[thick,->] (0,0,0) -- (1.2,0,0) node[anchor=north east]{$x$};
+			\draw[thick,->] (0,0,0) -- (0,1.2,0) node[anchor=north west]{$y$};
+			\draw[thick,->] (0,0,0) -- (0,0,1.2) node[anchor=south]{$z$};
+			
+			% coordonnées du qubit
+			\def\x{0.612}
+			\def\y{0.612}
+			\def\z{0.5}
+			
+			% vecteur du qubit
+			\draw[thick,->,red] (0,0,0) -- (\x,\y,\z) node[anchor=south east]{$|\psi\rangle$};
+			
+			% point du qubit
+			\fill[red] (\x,\y,\z) circle (0.015);
+			
+		\end{tikzpicture}
+		\subsection*{ Impact sur un système de preuve quantique}\
+		
+		Le qubit est dans un état superposé avant mesure, ce qui signifie que son résultat n’est pas connu. La mesure force le qubit à prendre un état concret ($|0\rangle$ ou $|1\rangle$), modifiant l’état initial. Cela assure que toute tentative d’observation est traçable, garantissant l’intégrité des preuves quantiques.
+		\subsection*{7. Expérience de la pensée Scrondiger adaptée}\
+		\subsection*{Version numérique du chat de Scrondiger}
+		
+		&
+		
+		
+		\raisebox{0.5cm}{\includegraphics[height=8cm]{sc.jpg}} 
+		&
+		\subsection*{Fichier dans un état superposé « présent/effacé » avant analyse}\
+		
+		En mécanique quantique, un état \textbf{superposé} désigne une situation où un système peut se trouver simultanément dans plusieurs états possibles jusqu'à ce qu'une observation soit réalisée.  
+		De manière analogue, un \textbf{fichier informatique} peut être considéré comme dans un état superposé tant qu'aucune vérification n'a été effectuée. Avant l'analyse par un programme ou un utilisateur, il est impossible de savoir avec certitude si le fichier est \textit{présent} ou \textit{effacé}.  
+		L'état réel du fichier n’est donc révélé qu’après observation.
+		
+		\subsection*{Impact sur la notion de preuve « certaine » en justice}\
+		
+		Cette analogie met en évidence que la \textbf{réalité d’un élément informatique} peut rester incertaine tant qu’aucune vérification n’est effectuée.  
+		Ainsi, la notion de \textbf{preuve absolument certaine} en justice est remise en question.  
+		Une \textbf{preuve numérique} ne peut être considérée fiable et incontestable que si elle est collectée et observée selon un protocole rigoureux, garantissant à la fois sa validité et son intégrité.
+		
+		\subsection*{Protocole d’observation minimisant l’effet sur le système}\
+		
+		Pour déterminer l’état d’un fichier ou d’un système sans le modifier, un protocole méthodique est requis :
+		
+		\begin{itemize}
+			\item Travailler uniquement sur une \textbf{copie} ou un \textbf{snapshot} du système afin de préserver l’original.
+			\item Privilégier des \textbf{mesures non intrusives}, telles que la lecture de métadonnées ou le calcul de hash.
+			\item Limiter le nombre d’\textbf{observations directes} afin de réduire l’impact sur le système.
+			\item \textbf{Journaliser} toutes les actions pour assurer la traçabilité et la reproductibilité.
+			\item Faire intervenir un \textbf{observateur indépendant} afin de garantir l’objectivité et la fiabilité des résultats.
+		\end{itemize}
+		
+		\section*{8.Analyse du théorème de non clonage}
+		\subsection*{Théorème de non-clonage empêchant la copie parfaite d’états quantiques}\
+		
+		Le théorème de non-clonage en mécanique quantique affirme qu’il est impossible de copier parfaitement un état quantique inconnu.  
+		Cette impossibilité découle de la linéarité des transformations unitaires. Copier deux états différents violerait le principe de superposition et permettrait de distinguer des états non orthogonaux ce qui contredit la mécanique quantique.
+		
+		\subsection*{ Implications pour la conservation des preuves quantiques}\
+		
+		En investigation numérique quantique, ce théorème a des implications majeures :
+		
+		\begin{itemize}
+		\item Il est impossible de dupliquer une preuve quantique à des fins de sauvegarde ou d'analyse parallèle.
+		\item La mesure est destructrice : observer une preuve altère potentiellement son état.
+		\item La chaîne de conservation doit garantir l'intégrité de l’état quantique unique, sans tentative de copie ou de lecture prématurée.Cela rend la manipulation des preuves quantiques beaucoup plus contraignante que les preuves numériques classiques.
+		\end{itemize}
+		\subsection*{Alternative : Protocole ZK-NR (Zero-Knowledge, Non-Revealing)}\
+		
+		Le protocole ZK-NR permet de contourner l’impossibilité de duplication en prouvant la possession ou la validité d’une preuve quantique sans révéler son contenu. Il repose sur :
+		
+		\begin{itemize}
+		\item Des preuves à divulgation nulle de connaissance ;
+		\item Des engagements cryptographiques liés à l’état quantique ;
+		\item Une validation externe possible sans mesure destructive.
+		\end{itemize}\
+		Ce protocole respecte le théorème de non-clonage tout en assurant la vérifiabilité d’une preuve quantique.
+		
+		\section*{Partie 4 : Paradoxe de l'Authenticité Invisible}
+		
+		\subsection*{9. Formalisation Mathématique du Paradoxe}
+		
+		\paragraph{ Estimation de A, C, O pour trois systèmes:}\
+		Soit une preuve numérique $P$ :
+		\begin{itemize}
+			\item $A(P)$ : degré d'authenticité (0 $\le$ A $\le$ 1)
+			\item $C(P)$ : degré de confidentialité (0 $\le$ C $\le$ 1)
+			\item $O(P)$ : opposabilité juridique (0 $\le$ O $\le$ 1)
+		\end{itemize}
+		
+		Les valeurs estimées à partir du tableau sont :
+		
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				Système & A(P) & C(P) & O(P) \\
+				\hline
+				1 & 0.8 & 0.6 & 0.9 \\
+				2 & 0.7 & 0.7 & 0.85 \\
+				3 & 0.6 & 0.75 & 0.8 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		On remarque un compromis : plus l'authenticité est élevée, plus la confidentialité tend à diminuer.
+		
+		\paragraph{ Vérification de l'inégalité fondamentale:}
+		Le paradoxe s'exprime par :
+		\[
+		A(P) \cdot C(P) \le 1 - \delta
+		\]
+		où $\delta$ est une constante positive (0 $<$ $\delta$ $\le$ 1) représentant la limite minimale du système.  
+		Pour illustration, on prend $\delta = 0.1$ : $1 - \delta = 0.9$.
+		
+		Vérification pour chaque système :
+		\begin{itemize}
+			\item Système 1 : $0.8 \cdot 0.6 = 0.48 \le 0.9$ ✅
+			\item Système 2 : $0.7 \cdot 0.7 = 0.49 \le 0.9$ ✅
+			\item Système 3 : $0.6 \cdot 0.75 = 0.45 \le 0.9$ ✅
+		\end{itemize}\
+		
+		Toutes les inégalités sont respectées, confirmant que l'authenticité et la confidentialité ne peuvent pas être toutes deux maximales.
+		
+		\paragraph{ Estimation des incertitudes et calcul de $\hbar_\text{num}$}:
+		Les incertitudes $\Delta A$ et $\Delta C$ représentent la variation possible de $A$ et $C$. On les estime à 10\% de la valeur correspondante dans le tableau :
+		
+		\begin{center}
+			\begin{tabular}{|c|c|c|}
+				\hline
+				Système & $\Delta A$ & $\Delta C$ \\
+				\hline
+				1 & 0.08 & 0.06 \\
+				2 & 0.07 & 0.07 \\
+				3 & 0.06 & 0.075 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		La relation d'incertitude est :
+		\[
+		\Delta A \cdot \Delta C \ge \frac{\hbar_\text{num}}{2} \implies \hbar_\text{num} \le 2 \cdot (\Delta A \cdot \Delta C)
+		\]
+		
+		Calculs pour chaque système :
+		\begin{itemize}
+			\item Système 1 : $2 \cdot (0.08 \cdot 0.06) = 0.0096$
+			\item Système 2 : $2 \cdot (0.07 \cdot 0.07) = 0.0098$
+			\item Système 3 : $2 \cdot (0.06 \cdot 0.075) = 0.009$
+		\end{itemize}
+		
+		Ainsi, $\hbar_\text{num}$ varie entre 0.009 et 0.0098, illustrant que plus l'authenticité est précise, plus la confidentialité devient incertaine, analogue au principe d'Heisenberg.
+		
+	    \section*{Implémentation Simplifiée ZK-NR}
+		\subsection*{a)proof-of-concept en Python simulant ZK-NR}
+		\raisebox{0.5cm}{\includegraphics[height=8cm]{proof.png}}
+	\section*{b) Test du compromis confidentialité vs vérifiabilité}
+	\begin{itemize}
+		\item Augmenter la complexité du hash ou la taille du challenge améliore la confidentialité mais augmente le temps de calcul.
+		\item Réduire la taille du challenge accélère la vérification mais diminue la sécurité.
+	\end{itemize}
+	
+	\section*{c) Overhead computationnel}
+	\begin{itemize}
+		\item Dans cette simulation, l'overhead est négligeable (millisecondes).
+		\item Dans des systèmes réels, l'overhead augmente avec la complexité du protocole et le nombre de qubits simulés.
+	\end{itemize}
+	\section*{Partie 5 : Intégration et Synthèse Avancée}
+	\section*{13.Protocole expérimental ; Projet : Paradoxe de l’authenticité invisible}
+	
+	\subsection*{Objectif}\
+	Tester si des protocoles de preuve de type Zero-Knowledge (ZK) adaptés peuvent améliorer le compromis entre \textbf{Authenticité} $A$ et \textbf{Confidentialité} $C$ tout en mesurant l’\textbf{overhead computationnel} et les incertitudes $\Delta A$, $\Delta C$. Produire des résultats quantifiables et reproductibles.
+	
+	\subsection*{Variables et définitions}
+	\begin{itemize}
+		\item $A(P) \in [0,1]$ : degré d’authenticité (probabilité qu’une preuve soit intacte et valide).
+		\item $C(P) \in [0,1]$ : degré de confidentialité (probabilité que le secret reste protégé).
+		\item $O(P) \in [0,1]$ : opposabilité juridique (satisfaction des critères légaux).
+		\item $\Delta A, \Delta C$ : incertitudes mesurées (écart-type empirique).
+		\item $\hbar_{\text{num}}$ : constante numérique issue de la relation 
+		\[
+		\Delta A \cdot \Delta C \geq \frac{\hbar_{\text{num}}}{2}.
+		\]
+		\item Mesures de performance : temps CPU (s), mémoire (MB), taille des messages (octets).
+	\end{itemize}
+	
+	\subsection*{Environnement expérimental}
+	\begin{itemize}
+		\item Langage : Python 3.10+
+		\item Librairies : \texttt{hashlib}, \texttt{time}, \texttt{numpy}, \texttt{matplotlib}
+		\item Jeu de données : preuves numériques synthétiques (fichiers courts, métadonnées)
+		\item Matériel : ordinateur personnel, configuration CPU/RAM documentée
+	\end{itemize}
+	
+	\subsection*{Méthode}
+	\begin{enumerate}
+		\item \textbf{Modélisation} : définir $A$ comme la fraction de preuves acceptées après attaque simulée et $C$ comme la probabilité de résistance à une tentative d’extraction du secret.
+		\item \textbf{Implémentation des protocoles} :
+		\begin{itemize}
+			\item Baseline : engagement simple + challenge.
+			\item ZK-adapté : simulation avec engagements multiples et rounds répétés.
+		\end{itemize}
+		\item \textbf{Tests et scénarios} :
+		\begin{itemize}
+			\item Exécution normale (prover + verifier).
+			\item Simulation d’attaques (altération, replay, bruteforce).
+			\item Répétition $N=100$ pour distributions statistiques.
+		\end{itemize}
+		\item \textbf{Mesures collectées} :
+		\begin{itemize}
+			\item Acceptation par le vérificateur ($A$).
+			\item Résistance à l’attaque ($C$).
+			\item Temps d’exécution et ressources consommées (overhead).
+			\item Calcul de $\Delta A$, $\Delta C$.
+		\end{itemize}
+		\item \textbf{Calculs et vérifications} :
+		\begin{itemize}
+			\item Vérifier la borne $\Delta A \cdot \Delta C \geq \frac{\hbar_{\text{num}}}{2}$.
+			\item Tracer courbes $A$ vs $C$ et analyser les points optimaux (front de Pareto).
+		\end{itemize}
+		\item \textbf{Analyse juridique et éthique} :
+		\begin{itemize}
+			\item Vérifier l’opposabilité ($O$) : horodatage, traçabilité, non-répudiation.
+			\item Évaluer les risques éthiques (surveillance, durée d’archivage).
+		\end{itemize}
+	\end{enumerate}
+	
+	\subsection*{Résultats attendus}
+	\begin{itemize}
+		\item Mise en évidence d’un compromis optimal entre authenticité et confidentialité.
+		\item Estimation numérique de $\hbar_{\text{num}}$ pour différents protocoles.
+		\item Quantification de l’overhead computationnel lié aux preuves ZK.
+		\item Proposition d’un cadre normatif conciliant technique et éthique.
+	\end{itemize}
+	\section*{11. L’avènement de l’ère quantique et la conservation des preuves numériques}\
+	L’affaire \textbf{QuantumLeaks}, une fuite de documents classifiés protégés par chiffrement post-quantique, illustre les enjeux de la conservation et de l’analyse de preuves numériques dans un contexte quantique. Le chiffrement post-quantique (PQC) vise à résister aux attaques des ordinateurs quantiques, en particulier celles exploitant l’algorithme de Shor capable de casser RSA ou ECC.
+	
+	
+	Les documents doivent rester juridiquement recevables pendant plus de 30 ans, un délai dépassant le cycle de vie technologique actuel. Le problème central est le trilemme \textbf{CRO} : Confidentialité, Résilience et Opposabilité juridique.
+	
+	
+	\subsection*{1. Contraintes de conservation long terme}
+	Trois difficultés majeures se posent :
+	\begin{itemize}
+		\item Authenticité : garantir que la preuve n'a subi aucune altération.
+		\item Confidentialité : protéger les données sensibles contre les attaquants quantiques.
+		\item Opposabilité juridique : assurer que la preuve reste recevable et traçable.
+	\end{itemize}
+	Ces dimensions sont parfois contradictoires : renforcer la confidentialité peut complexifier la vérifiabilité et vice-versa.
+	
+	
+	\subsection*{2. Défi : conciliation CRO en sécurité nationale}
+	Dans QuantumLeaks, il faut équilibrer :
+	\begin{itemize}
+		\item Protection du secret d'État contre des puissances étrangères.
+		\item Résilience face aux évolutions technologiques quantiques.
+		\item Garantir l’opposabilité juridique pour maintenir la valeur probatoire.
+	\end{itemize}
+	
+	
+	\subsection*{3. Recommandations techniques}
+	\begin{itemize}
+		\item \textbf{Archivage post-quantique :} utiliser les algorithmes normalisés par le NIST (Kyber pour le chiffrement, Dilithium pour les signatures).
+		\item \textbf{Blockchain quantiquement résistante :} inscrire les empreintes (hash) des preuves dans une blockchain sécurisée par des primitives PQC.
+		\item \textbf{Protocoles ZK-NR (Zero-Knowledge Non-Reproductible) :} vérifier la validité d’une preuve sans divulguer le contenu intégral.
+		\item \textbf{Horodatage inviolable :} recours à des services distribués de timestamping pour certifier la date et garantir l’opposabilité future.
+	\end{itemize}
+	
+	
+	\subsection*{4. Recommandations éthiques}
+	\begin{itemize}
+		\item Transparence contrôlée : informer le public de l’existence des preuves sans révéler leur contenu.
+		\item Respect de la vie privée : limiter la surveillance aux finalités légales.
+		\item Équilibre sécurité nationale / libertés fondamentales : protéger l’État sans surveillance généralisée.
+		\item Neutralité de l’investigateur : assurer que la collecte et l’analyse suivent une méthodologie scientifique indépendante.
+	\end{itemize}
+	
+	
+	\section*{12. Neutralité de l’investigateur numérique à l’ère quantique}\
+	Le débat se cristallise autour d’un conflit philosophique : objectivité vs constructivisme.
+	
+	
+	\begin{itemize}
+		\item \textbf{Wheeler :} "It from bit"  l’acte de mesure participe à la constitution du fait observé, remettant en cause la donnée préexistante.
+		\item \textbf{Heidegger :} la technique n’est pas neutre mais "enframée" (Gestell), les instruments et protocoles orientent l’investigation.
+		\item \textbf{Kuhn :} les critères de neutralité et validation scientifique évoluent avec les changements de paradigme, affectant l’interprétation des faits.
+	\end{itemize}\
+	
+	
+	Conjugués, ces apports suggèrent que la neutralité absolue est inatteignable. Cependant, une neutralité fonctionnelle est possible via :
+	\begin{itemize}
+		\item Protocoles transparents et reproductibles.
+		\item Évaluation collective et méthodologique.
+		\item Reconnaissance des limites imposées par l’observation (Wheeler), la technique (Heidegger) et le paradigme (Kuhn).
+		\item Préservation de la confiance publique dans les enquêtes numériques.
+	\end{itemize}
+	\section*{Partie 2: Mathématiques de l’Investigation}
+	
+		\subsection*{3.Calcul d’Entropie de Shannon Appliquée}
+		\raisebox{0.5cm}{\includegraphics[height=8cm]{aess.png}}
+		\subsection*{Script python}
+		\raisebox{0.5cm}{\includegraphics[height=8cm]{en.png}}
+		\subsection*{ Analyse des résultats d’entropie}
+		
+		\begin{itemize}
+			\item \textbf{H(texte) ≈ 1.5 bits/caractère :}  
+			Cela signifie que le texte original est assez prévisible, avec peu de variations.  
+			L’entropie est donc relativement basse.
+			
+			\item \textbf{H(JPEG) ≈ 7.2 bits/octet :}  
+			Une image JPEG présente une structure plus complexe, avec environ 7.2 bits par octet.  
+			Cela indique une grande quantité d’information ou d’aléatoire dans les données.
+						\item \textbf{H(AES) ≈ 7.9 bits/octet :}  
+			Le texte chiffré par AES atteint une entropie très proche de 8 bits par octet (valeur maximale).  
+			Cela signifie que les données apparaissent aléatoires, ce qui est attendu après un chiffrement robuste.
+		\end{itemize}
+		
+		\subsection*{Détermination d’un seuil de détection automatique}\
+		
+		On peut fixer un seuil de détection basé sur l’entropie :  
+		
+		\[
+		H > 7.5 \; \text{bits/octet} \;\;\Rightarrow\;\; \text{fichier probablement chiffré.}
+		\]
+		
+		\section*{4.Théorie des Graphes en Investigation Criminelle}
+		
+		\subsection*{Construction du Graphe à partir de Communications Téléphoniques}
+		
+		\begin{center}
+			\begin{tikzpicture}[scale=1, every node/.style={circle, draw, minimum size=1cm}]
+				% Nodes
+				\node (A) at (0,0) {A};
+				\node (B) at (3,0) {B};
+				\node (C) at (1.5,2) {C};
+				\node (D) at (4.5,2) {D};
+				\node (E) at (6,0) {E};
+				
+				% Edges
+				\draw (A) -- (B);
+				\draw (A) -- (C);
+				\draw (B) -- (C);
+				\draw (B) -- (D);
+				\draw (C) -- (D);
+				\draw (D) -- (E);
+				
+				% Node colors proportional to centrality (simulé)
+				\foreach \node/\color in {A/red!50, B/red!80, C/red!70, D/red!90, E/red!30} {
+					\node[fill=\color] at (\node) {\node};
+				}
+			\end{tikzpicture}
+		\end{center}
+		
+		\subsection*{Calcul des Métriques de Centralité}
+		\begin{itemize}
+			\item Degré : nombre de connexions directes
+			\item Intermédiarité (Betweenness) : nombre de plus courts chemins passant par le nœud
+			\item Proximité (Closeness) : inverse de la distance moyenne aux autres nœuds
+		\end{itemize}
+		
+		\begin{center}
+			\begin{tabular}{c|c|c|c}
+				Nœud & Degré & Intermédiarité & Proximité \\
+				\hline
+				A & 2 & 0.0 & 0.67 \\
+				B & 3 & 0.5 & 0.8 \\
+				C & 3 & 0.4 & 0.75 \\
+				D & 3 & 0.6 & 0.8 \\
+				E & 1 & 0.0 & 0.5 \\
+			\end{tabular}
+		\end{center}
+		
+		\subsection*{Nœud critique}
+		Le nœud \textbf{D} est identifié comme critique selon l’algorithme de Freeman (intermédiarité maximale).
+		
+		\section*{5.Modélisation de l’Effet Papillon en Forensique}
+		
+		\subsection*{Système de logs}\
+		On considère 1000 événements avec timestamps initiaux réguliers :
+		\[
+		t_i = i \cdot 60, \quad i = 0,1,2,...,999
+		\]
+		Puis on modifie aléatoirement chaque timestamp :
+		\[
+		t_i' = t_i + \Delta_i, \quad \Delta_i \in [-30, +30]\text{ s}
+		\]
+		
+		\subsection*{Simulation et calcul de la divergence}\
+		On définit la différence cumulée :
+		\[
+		\delta_i = t_i' - t_i
+		\]
+		
+		\subsection*{Visualisation des timestamps et de la divergence}\
+		
+		% Figure 1 : timestamps originaux vs modifiés
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=12cm, height=6cm,
+					xlabel={Événements},
+					ylabel={Timestamp (s)},
+					legend pos=north west,
+					grid=major,
+					]
+					
+					\addplot[blue, thick] coordinates {
+						(0,0) (100,6000) (200,12000) (300,18000) (400,24000) (500,30000)
+						(600,36000) (700,42000) (800,48000) (900,54000) (999,59940)
+					};
+					\addlegendentry{Original}
+					
+					
+					\addplot[red, thick, mark=*] coordinates {
+						(0,5) (100,6007) (200,12012) (300,18016) (400,24022) (500,30028)
+						(600,36035) (700,42044) (800,48055) (900,54068) (999,59972)
+					};
+					\addlegendentry{Modifié ±30s}
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		
+	
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+					width=12cm, height=6cm,
+					xlabel={Événements},
+					ylabel={$\delta_i$ (s)},
+					grid=major,
+					]
+					\addplot[green, thick] coordinates {
+						(0,5) (100,7) (200,12) (300,16) (400,22)
+						(500,28) (600,35) (700,44) (800,55) (900,68) (999,72)
+					};
+					\addlegendentry{Différence cumulée $\delta_i$}
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		
+		\subsection*{Calcul de l’exposant de Lyapunov}
+		On utilise :
+		\[
+		\lambda = \frac{1}{t} \ln \frac{\delta(t)}{\delta(0)}
+		\]
+		Avec les valeurs simulées :
+		\begin{itemize}
+			\item $\delta(0) = 5$ s
+			\item $\delta(500) = 28$ s
+			\item $t = 500$
+		\end{itemize}
+		\[
+		\lambda = \frac{1}{500} \ln \frac{28}{5} \approx 0.0035
+		\]
+		
+		\noindent\
+		Ainsi, la petite perturbation initiale se traduit par une divergence exponentielle des timestamps, illustrant l’effet papillon.
+		\section*{Partie 1 : Fondements Philosophiques et Épistémologiques}
+\section*{1. Analyse critique du paradoxe de la transparence}\
+Byung-Chul Han met en lumière un paradoxe fondamental de la transparence : dans nos sociétés contemporaines, la demande accrue de transparence et d’ouverture des institutions peut paradoxalement menacer la liberté et la vie privée des individus. Plus l’information est accessible, plus elle est susceptible d’être exploitée, parfois de manière malveillante, compromettant les droits fondamentaux.
+
+
+Dans un contexte d’investigation numérique, ce paradoxe se manifeste clairement lorsqu’on considère la balance entre transparence gouvernementale et vie privée des citoyens. Par exemple, un gouvernement peut publier des données publiques sur la sécurité nationale ou la santé publique pour assurer la confiance citoyenne. Toutefois, ces informations peuvent inclure des métadonnées ou des traces numériques permettant l’identification indirecte des individus, exposant ainsi des aspects de leur vie privée. La transparence, initialement conçue pour renforcer la confiance et la responsabilité, devient alors un vecteur de surveillance et de vulnérabilité.
+
+
+Une résolution pratique de ce paradoxe peut s’inspirer de l’éthique kantienne. Kant insiste sur le respect de la dignité humaine et la nécessité de traiter chaque individu comme une fin en soi. Appliqué à l’investigation numérique, cela implique que la publication d’informations ou la collecte de données doivent être encadrées par des principes clairs garantissant que l’usage des données respecte la vie privée et les droits fondamentaux, et ne réduit jamais l’individu à un simple moyen pour atteindre un objectif politique ou social. En pratique, cela pourrait se traduire par l’adoption de protocoles de publication de données anonymisées, par des audits réguliers sur l’usage des informations collectées, et par une gouvernance transparente des mécanismes de traitement des données elles-mêmes.
+
+
+\section*{2. Transformation ontologique du numérique}\
+Heidegger conçoit l’être comme un "être-dans-le-monde" (Dasein), caractérisé par sa capacité à comprendre, interpréter et agir dans son environnement. Dans l’ère numérique, cette conception est adaptée par la notion d’"être-par-la-trace" : l’existence individuelle est de plus en plus définie par les traces numériques laissées à travers les réseaux, les interactions et les systèmes numériques.
+
+
+Un profil social complet, construit à partir de l’ensemble des données collectées en ligne (réseaux sociaux, achats, géolocalisation, interactions), illustre parfaitement cette ontologie. L’individu est moins perçu comme une entité autonome qu’à travers les marques qu’il laisse derrière lui. Ces traces constituent une représentation numérique de l’être, qui peut être analysée, corrélée et interprétée pour en déduire des comportements, des affiliations ou des intentions.
+
+
+Cette transformation ontologique a un impact direct sur la notion de preuve légale. La preuve ne se limite plus à des documents ou objets physiques ; elle inclut désormais des traces numériques et des corrélations complexes entre données. La légitimité d’une preuve repose sur sa capacité à représenter fidèlement l’activité de l’individu tout en respectant les principes de confidentialité et d’intégrité. La notion d’"être-par-la-trace" exige que les systèmes juridiques reconnaissent la validité et les limites de ces preuves numériques, en intégrant des standards techniques et éthiques pour garantir leur fiabilité et leur recevabilité.
+
+
+\end{document} 
+		
+\end{document}
