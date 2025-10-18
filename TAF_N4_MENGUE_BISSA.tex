@@ -1,0 +1,329 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french,english]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2.3cm}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows.meta}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+
+\geometry{a4paper, margin=1.8cm}
+
+\fancyhead[L]{Investigation Numérique}
+\fancyhead[R]{\textit{MENGUE BISSA}}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\geometry{left=18mm,right=18mm,top=18mm,bottom=18mm}
+
+\begin{document}
+	\thispagestyle{empty}
+	
+	
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[blue,line width=6pt]
+		($(current page.north west)+(1.2cm,-1.2cm)$) rectangle
+		($(current page.south east)+(-1.2cm,1.2cm)$);
+		\draw[black,line width=0.5pt]
+		($(current page.north west)+(1.4cm,-1.4cm)$) rectangle
+		($(current page.south east)+(-1.4cm,1.4cm)$);
+	\end{tikzpicture}
+	
+	
+	\vspace*{-1cm} 
+	\begin{center}
+		\begin{tabular}{m{0.40\textwidth} m{0.15\textwidth} m{0.40\textwidth}}
+		
+			\centering\small
+			RÉPUBLIQUE DU CAMEROUN\\
+			\textit{Paix -- Travail -- Patrie}\\
+			******\\
+			MINISTÈRE DE L'ENSEIGNEMENT SUPÉRIEUR\\
+			******\\
+			\textbf{UNIVERSITÉ DE YAOUNDÉ I}\\
+			******\\
+			\textbf{ÉCOLE NATIONALE SUPÉRIEURE POLYTECHNIQUE}\\
+			******\\
+			DÉPARTEMENT DE GÉNIE INFORMATIQUE\\
+            ******\\
+			&
+		
+			\centering
+			\raisebox{0.5cm}{\includegraphics[height=3cm]{ENSPY.jpg}} 
+			&
+			
+			\centering\small
+			\hspace{0.2cm} 
+			REPUBLIC OF CAMEROON\\
+			\textit{Peace -- Work -- Fatherland}\\
+			******\\
+			MINISTRY OF HIGHER \\
+            EDUCATION\\
+			******\\
+			\textbf{UNIVERSITY OF YAOUNDE I}\\
+			******\\
+			\textbf{NATIONAL ADVANCED SCHOOL OF ENGINEERING}\\
+			******\\
+			COMPUTER ENGINEERING DEPARTMENT\\
+            ******\\
+		\end{tabular}
+	\end{center}
+	
+
+	\vspace{0.5cm}
+	\begin{center}
+		\fcolorbox{black}{white}{%
+			\parbox{0.85\textwidth}{%
+				\vspace{0.4cm}
+				\centering
+				\bfseries\fontsize{21pt}{23pt}\selectfont
+				INTRODUCTION AUX TECHNIQUES\\
+				D'INVESTIGATION NUMÉRIQUE
+				\vspace{0.4cm}
+		}}
+	\end{center}
+	
+
+	\vspace{0.8cm}
+	\begin{center}
+		\fcolorbox{black}{blue!40!blue}{%
+			\parbox{0.8\textwidth}{%
+				\vspace{0.5cm}
+				\centering
+				\color{white}\bfseries\fontsize{22pt}{28pt}\selectfont
+				OSINT DE MVONGO FAREL
+				\vspace{0.5cm}
+		}}
+	\end{center}
+	
+	
+	\vspace{1.5cm}
+	\begin{center}
+			\fontsize{15pt}{20pt}\selectfont
+            \textit{Rédigé par}\\
+            \textbf{MENGUE BISSA MARGUERITE}\\
+            \textit{Matricule : \textbf{22P064}}
+	\end{center}
+	
+	\vspace{1.5cm}
+	\begin{center}
+			\fontsize{15pt}{20pt}\selectfont
+            \textit{Sous la supervision de}\\
+            \textbf{Mr Thierry MINKA}\\
+	\end{center}
+	
+
+	\vspace{1cm}
+	\begin{center}
+		\fcolorbox{black}{blue!10!blue}{%
+			\parbox{0.4\textwidth}{%
+				\vspace{0.3cm}
+				\centering
+				\color{white}\bfseries\fontsize{10pt}{10pt}\selectfont
+				Année académique 2025/2026
+				\vspace{0.2cm}
+		}}
+	\end{center}
+	
+	\vfill
+	\pagestyle{fancy}
+    \newpage
+    \pagestyle{fancy}
+	
+	{\Large
+		
+		{\Large
+
+}
+
+\begin{document}
+\begin{center}
+    {\Large \textbf{TABLE DE MATIÈRES}} \\[0.5cm]
+\end{center}
+
+\begin{flushleft}
+\textbf{Introduction} \dotfill \pageref{sec:intro} \\[0.3cm]
+
+\textbf{I. Cadre de l’enquête} \dotfill \pageref{sec:cadre} \\
+\hspace{0.7cm} I.1 Objectif de la recherche \dotfill \pageref{subsec:objectif} \\
+\hspace{0.7cm} I.2 Méthodes et outils utilisés \dotfill \pageref{subsec:methodes} \\[0.3cm]
+
+\textbf{II. Identification de la cible} \dotfill \pageref{sec:identification} \\
+\hspace{0.7cm} II.1 Connaissance préalable de la personne \dotfill \pageref{subsec:connaissance} \\
+\hspace{0.7cm} II.2 Recherche et identification en ligne \dotfill \pageref{subsec:recherche} \\
+\hspace{0.7cm} II.3 Présence numérique observée \dotfill \pageref{subsec:presence} \\[0.3cm]
+
+\textbf{III. Analyse des informations collectées} \dotfill \pageref{sec:analyse} \\
+\hspace{0.7cm} III.1 Données connues avant l’enquête \dotfill \pageref{subsec:connues} \\
+\hspace{0.7cm} III.2 Découvertes pendant l’investigation \dotfill \pageref{subsec:decouvertes} \\
+\hspace{0.7cm} III.3 Éléments confirmés ou contredits \dotfill \pageref{subsec:elements} \\[0.3cm]
+
+\textbf{IV. Comparaison des perceptions} \dotfill \pageref{sec:comparaison} \\
+\hspace{0.7cm} IV.1 Perception initiale \dotfill \pageref{subsec:initiale} \\
+\hspace{0.7cm} IV.2 Perception après investigation \dotfill \pageref{subsec:apres} \\
+\hspace{0.7cm} IV.3 Analyse des écarts \dotfill \pageref{subsec:ecarts} \\[0.3cm]
+\textbf{V. Recommandations et réflexions éthiques} \dotfill \pageref{sec:recommandations} \\
+\hspace{0.7cm} V.1 Bonnes pratiques en OSINT \dotfill \pageref{subsec:bonnespratiques} \\
+\hspace{0.7cm} V.2 Limites et précautions à respecter \dotfill \pageref{subsec:limites} \\[0.3cm]
+\textbf{Conclusion} \dotfill \pageref{sec:conclusion}\\[0.3cm]
+\textbf{Références bibliographiques} \dotfill \pageref{sec:ref}
+\end{flushleft}
+\newpage
+\section*{Introduction}
+\label{sec:intro}
+\addcontentsline{toc}{section}{Introduction}\
+
+L’investigation numérique, désigne la collecte, l’analyse et l’interprétation d’informations accessibles au public, dans le but d’en tirer des connaissances pertinentes.Elle s’appuie sur l’exploitation des données disponibles sur Internet : moteurs de recherche, réseaux sociaux, bases de données publiques, articles, et autres traces numériques.Dans un monde de plus en plus connecté, la maîtrise de l’OSINT constitue une compétence essentielle pour les professionnels de la cybersécurité. Elle permet non seulement d’évaluer la visibilité numérique d’une personne ou d’une organisation, mais aussi de comprendre les risques liés à la divulgation d’informations personnelles.Le présent travail s’inscrit dans ce cadre pédagogique. Il vise à mettre en pratique les méthodes d’investigation numérique à travers une étude de cas portant sur \textbf{MVONGO MEDJO ORDI FAREL}, étudiant en 4\textsuperscript{e} année de \textbf{Cybersécurité et Investigation Numérique} à l’École Nationale Supérieure Polytechnique de Yaoundé.L’objectif est double :
+\begin{itemize}
+    \item Démontrer la capacité à collecter, structurer et analyser des données issues de sources ouvertes ;
+    \item Évaluer la cohérence entre la présence numérique et la personnalité réelle du sujet étudié.
+\end{itemize}\
+Cette investigation ouvre ainsi la voie à une réflexion sur l’importance de la \textbf{traçabilité numérique}, de la \textbf{gestion de l’identité en ligne} et du \textbf{respect de l’éthique dans l’investigation numérique}.
+\newpage
+\section*{I.Cadre de l’enquête}
+\label{sec:cadre}
+
+\subsection*{I.1 Objectif de la recherche}
+\label{subsec:objectif}\
+
+Cette enquête a pour objectif principal de réaliser une \textbf{investigation numérique (OSINT)} sur la personne de \textbf{MVONGO MEDJO ORDI FAREL}.\  
+Elle vise à analyser son parcours académique, professionnel et social à travers les informations accessibles sur Internet et dans d’autres sources ouvertes.  
+
+De manière spécifique, cette recherche poursuit les buts suivants :
+\begin{itemize}
+    \item Identifier les traces numériques laissées par Farel sur différentes plateformes ;
+    \item Évaluer la cohérence entre ses informations réelles et celles disponibles en ligne ;
+    \item Comprendre son identité numérique et sa réputation en tant qu’étudiant en cybersécurité ;
+    \item Développer une approche critique et éthique de la collecte de données personnelles publiques.
+\end{itemize}
+
+Cet objectif s’inscrit dans un cadre purement académique et pédagogique, sans intention de nuire à la vie privée du sujet observé. L’étude permet de mettre en pratique les outils et les méthodes d’investigation numérique dans un contexte réaliste.
+
+\subsection*{I.2 Méthodes et outils utilisés}
+\label{subsec:methodes}\
+Pour mener à bien cette investigation, plusieurs \textbf{méthodes de recherche OSINT} ont été utilisées.  
+Elles reposent sur la collecte d’informations provenant de \textbf{sources ouvertes et publiques} accessibles légalement.
+
+\paragraph{Méthodes employées :}
+\begin{itemize}
+    \item Recherche manuelle d’informations via des moteurs de recherche (Google, Bing) ;
+    \item Observation et recoupement d’éléments présents sur les réseaux sociaux et plateformes éducatives ;
+    \item Consultation de sites institutionnels liés à la formation en cybersécurité et à Polytechnique de Yaoundé ;
+    \item Analyse contextuelle des résultats pour en évaluer la fiabilité et la cohérence.
+\end{itemize}
+
+\paragraph{Outils utilisés :}
+\begin{itemize}
+    \item Navigateurs web et fonctions avancées de recherche (Google Dorks) ;
+    \item Plateformes professionnelles et éducatives en ligne (LinkedIn, Intelligentsia Corporation, Académie du Codeur) ;
+    \item Archives web et outils de vérification de présence numérique: Facebook.
+\end{itemize}\
+Certaines informations demeurent inaccessibles ou non vérifiables pour des raisons de confidentialité ou de sécurité. Le travail s’appuie donc exclusivement sur des données publiques et ne viole aucun cadre légal ou éthique.Ainsi, cette méthodologie garantit à la fois la \textbf{fiabilité} des résultats et le \textbf{respect de la vie privée} du sujet étudié.
+\section*{II. Identification de la cible}
+\label{sec:identification}
+
+\subsection*{II.1 Connaissance préalable de la personne}
+\label{subsec:connaissance}\
+Avant le début de cette investigation numérique, \textbf{MVONGO MEDJO ORDI FAREL} était déjà connu personnellement depuis \textbf{l’année 2022}, période où nous nous sommes rencontrés en \textbf{première année à l’École Nationale Supérieure Polytechnique de Yaoundé}.  Dès cette époque, il se distinguait par son sérieux, sa curiosité intellectuelle et son intérêt marqué pour la cybersécurité et les sciences appliquées.  
+Il était perçu comme un étudiant brillant, discret mais très déterminé dans la poursuite de ses objectifs académiques.
+Sur le plan personnel, Farel se montrait \textbf{calme, réfléchi et toujours prêt à aider ses camarades}, notamment dans les matières scientifiques comme les mathématiques ou l’informatique. Cependant, peu d’informations étaient connues sur son environnement familial, ses activités extra-académiques et sa présence numérique avant cette enquête.
+
+\subsection*{II.2 Recherche et identification en ligne}\
+\label{subsec:recherche}\
+Les recherches en ligne ont permis de rassembler plusieurs informations fiables sur la vie académique et professionnelle de Farel. Il a intégré \textbf{l’École Nationale Supérieure Polytechnique de Yaoundé} en 2022, après avoir obtenu son \textbf{baccalauréat au Lycée d’Ekounou} la même année avec la mention \textit{Assez Bien}. Toujours en 2022, il a passé avec succès trois concours majeurs :
+\begin{itemize}
+    \item L’École des Travaux Publics ;
+    \item L’École de Médecine de Yaoundé ;
+    \item L’École Nationale Supérieure Polytechnique, qu’il a finalement choisie.
+\end{itemize}\
+Ces résultats témoignent d’une grande polyvalence intellectuelle et d’une forte capacité d’adaptation.  
+Les recherches confirment également son appartenance à la filière \textbf{Cybersécurité et Investigation Numérique}, dans laquelle il est actuellement en 4\textsuperscript{e} année.
+\subsection*{II.3 Présence numérique observée}
+\label{subsec:presence}\
+L’analyse de la présence numérique de Farel révèle un profil équilibré entre vie académique, professionnelle et personnelle. Ses traces en ligne, bien que limitées, reflètent un comportement responsable et une gestion prudente de son identité numérique.Sur le plan personnel, il vit avec ses parents, sa sœur et ses deux nièces. Il est le benjamin d’une famille de deux enfants. Son comportement en ligne est marqué par la discrétion, l'immaturité sur les statuts et une attitude respectueuse, qualités essentielles dans le domaine de la cybersécurité.Cette identification complète permet d’établir une image cohérente et positive de Farel, tout en posant les bases pour une analyse plus approfondie de son profil.
+\section*{III. Analyse des informations collectées}
+\label{sec:analyse}
+\subsection*{III.1 Données connues avant l’enquête}
+\label{subsec:connues}\
+Avant le lancement de cette investigation, seules quelques informations générales étaient connues à propos de \textbf{MVONGO MEDJO ORDI FAREL}. On savait qu’il était étudiant à l’École Nationale Supérieure Polytechnique de Yaoundé, dans la filière \textbf{Cybersécurité et Investigation Numérique}, et qu’il se distinguait par son sérieux, sa ponctualité et son goût prononcé pour les matières scientifiques. Cependant, sa trajectoire académique complète, ses activités professionnelles, son environnement familial et certains aspects de sa personnalité restaient peu documentés. Cette situation justifiait la nécessité d’une recherche plus approfondie à travers les sources ouvertes disponibles.
+\subsection*{III.2 Découvertes pendant l’investigation}
+\label{subsec:decouvertes}\
+L’investigation a permis de mettre en lumière plusieurs éléments nouveaux et significatifs. Tout d’abord, il ressort que Farel possède un parcours académique exceptionnel, caractérisé par une réussite continue depuis le secondaire. Il a obtenu son baccalauréat au Lycée d’Ekounou en 2022 avec la mention \textit{Assez Bien}, puis a réussi trois concours la même année : Travaux Publics, Médecine et Polytechnique. Son choix d’intégrer Polytechnique témoigne d’une orientation claire vers les sciences appliquées et la technologie.  
+Au sein de l’école, il a su maintenir un haut niveau d’excellence et s’est spécialisé dans la cybersécurité, domaine en plein essor et exigeant une rigueur intellectuelle remarquable.En parallèle, Farel a démontré un fort sens du partage du savoir.Il exerce comme \textbf{répétiteur à domicile} et \textbf{enseignant à Intelligentsia Corporation} depuis juin 2023, où il dispense des cours de mathématiques, d’informatique et de culture générale pour la préparation aux concours d’entrée dans des écoles supérieures. Il participe également à des programmes de formation à distance tels que \textbf{l’Académie du Codeur}, où il perfectionne ses compétences techniques et obtient des certifications professionnelles (NSE 1 et NSE 2).Ces informations révèlent une personnalité équilibrée, disciplinée et tournée vers l’excellence académique. Elles confirment aussi son intérêt profond pour la cybersécurité, un domaine dans lequel il se construit progressivement une identité forte.
+
+\subsection*{III.3 Éléments confirmés ou contredits}
+\label{subsec:elements}\
+Les données recueillies confirment l’image initiale d’un étudiant sérieux, motivé et ambitieux.  
+Aucune incohérence notable n’a été relevée entre les informations trouvées et celles connues auparavant.  
+Au contraire, l’investigation a renforcé la perception d’un jeune homme réfléchi, travailleur et passionné par son domaine.Les observations indiquent également une bonne maîtrise de sa présence numérique :  
+Farel partage très peu d’informations personnelles sensibles, ce qui témoigne d’une conscience aigüe des enjeux de confidentialité et de protection des données.
+\section*{IV. Comparaison des perceptions}
+\label{sec:comparaison}
+\subsection*{IV.1 Perception initiale}
+\label{subsec:initiale}\
+Avant l’enquête, Farel était perçu comme un camarade discret, réservé, mais extrêmement intelligent et passionné par les sciences.  Son comportement en classe reflétait la rigueur et la discipline. Cependant, son côté personnel demeurait largement inconnu, ce qui entretenait une image partielle, centrée sur l’aspect académique.
+\subsection*{IV.2 Perception après investigation}
+\label{subsec:apres}\
+Après l’investigation, la perception de Farel s’est considérablement enrichie. Derrière sa discrétion se cache une personnalité ambitieuse, persévérante et profondément engagée dans la transmission du savoir.  Ses activités de répétiteur et d’enseignant révèlent un esprit de leadership et une volonté d’aider les autres à progresser.Il apparaît également comme une personne équilibrée, attachée à sa famille et dotée d’une grande stabilité émotionnelle.  
+Son implication dans des structures comme l’Académie du Codeur et son obtention de certifications professionnelles confirment son désir constant d’apprendre et d’évoluer.
+
+\subsection*{IV.3 Analyse des écarts}
+\label{subsec:ecarts}\
+L’écart principal entre la perception initiale et celle obtenue après l’enquête réside dans la profondeur du profil découvert. L’investigation a permis de mettre en évidence des aspects méconnus de sa personnalité : autonomie, esprit d’initiative, et maturité professionnelle. Farel n’est pas seulement un étudiant brillant, mais un jeune acteur engagé dans le monde numérique.Ainsi, la nouvelle perception repose sur une vision complète de sa personnalité : un équilibre entre compétence technique, rigueur académique, responsabilité éthique et sens humain.
+
+\section*{V. Recommandations et réflexions éthiques}
+\label{sec:recommandations}
+\subsection*{V.1 Axes d’amélioration et recommandations personnelles}
+\label{subsec:bonnespratiques}\
+Malgré ses nombreuses qualités, certaines pistes d’amélioration peuvent être proposées pour favoriser un développement harmonieux :
+\begin{enumerate}
+    \item \textbf{Gestion du temps :} Farel gagnerait à mieux planifier ses activités multiples afin de limiter les retards et d’éviter la surcharge de travail.
+    \item \textbf{Communication interpersonnelle :} Une plus grande ouverture dans les échanges et les projets collectifs renforcerait ses compétences relationnelles.
+    \item \textbf{Valorisation de son profil professionnel :} Il serait bénéfique de créer ou d’optimiser son profil LinkedIn pour mettre en avant ses réalisations, certifications et projets personnels.
+    \item \textbf{Équilibre personnel :} Préserver du temps pour ses loisirs et ses proches afin de maintenir un bon équilibre entre vie académique et vie privée.
+    \item \textbf{Leadership et partage :} Continuer à motiver et former les autres, tout en restant un modèle d’humilité et d’éthique professionnelle.
+\end{enumerate}
+\subsection*{V.2 Réflexion éthique globale}
+\label{subsec:limites}\
+Cette investigation met en évidence la nécessité de respecter la \textbf{vie privée} et la \textbf{dignité numérique} des personnes lors de toute recherche OSINT.  
+Farel, en tant qu’étudiant dans ce domaine, illustre parfaitement les valeurs de \textbf{responsabilité}, de \textbf{discrétion} et d’\textbf’intégrité} attendues d’un futur professionnel de la cybersécurité.Il est recommandé qu’il maintienne cette attitude exemplaire et qu’il continue à cultiver une éthique forte, aussi bien dans sa vie personnelle que dans ses futures activités professionnelles.
+\newpage
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+\label{sec:conclusion}\
+Au terme de cette investigation , il ressort que \textbf{MVONGO MEDJO ORDI FAREL} incarne le profil d’un jeune étudiant exemplaire, à la fois passionné, discipliné et profondément engagé dans son parcours académique et professionnel. Son identité numérique, bien maîtrisée, reflète une conscience claire des enjeux liés à la cybersécurité et à la protection des données personnelles.
+Cette étude a permis non seulement de confirmer la cohérence entre sa personnalité réelle et son image numérique, mais aussi de mettre en évidence des qualités humaines et professionnelles remarquables : sens de la responsabilité, rigueur, curiosité intellectuelle et désir constant de progression.Les informations recueillies illustrent un équilibre rare entre vie académique, implication sociale et discrétion en ligne.Son parcours et son comportement constituent une source d’inspiration pour tout apprenant désireux d’allier savoir, discipline et intégrité dans le domaine de la sécurité informatique.
+\begin{thebibliography}{99}\label{sec:ref}\
+\bibitem{facebook}
+\textbf{FAREL MEDJO} (2025). Profil Facebook. \url{https://www.facebook.com/farel.medjo?mibextid=LQQJ4d&mibextid=LQQJ4d}. Consulté le 18 octobre 2025.
+\bibitem{linkedin}
+\textbf{FAREL MEDJO} (2025). Profil LinkedIn. \url{https://www.linkedin.com/in/farel-medjo-929532337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app}. Consulté le 18 octobre 2025.
+\bibitem{enspy2022}
+République du Cameroun, Ministère de l'Enseignement Supérieur (2022). Résultats du concours d'entrée à l'École Nationale Supérieure Polytechnique de Yaoundé, filière Humanités Numériques. \url{https://polytechnique.cm/wp-content/uploads/2022/08/Resultat-ENSPY-2022_1ere-annee-Arts-Num-et-Humanites-Num.pdf}. Consulté le 18 octobre 2025.
+
+\bibitem{etp2022}
+République du Cameroun, Ministère de l'Enseignement Supérieur (2022). Résultats du concours d'entrée à l'École des Travaux Publics. \url{https://enstp.cm/wp-content/uploads/2022/10/Piece-jointe-sans-titre-00016.pdf}. Consulté le 18 octobre 2025.
+
+\end{thebibliography}
+
+\end{document}
