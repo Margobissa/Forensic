@@ -1,0 +1,309 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french,english]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2.3cm}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows.meta}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+
+\geometry{a4paper, margin=1.8cm}
+
+\fancyhead[L]{Investigation Numérique}
+\fancyhead[R]{\textit{MENGUE BISSA}}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\geometry{left=18mm,right=18mm,top=18mm,bottom=18mm}
+
+\begin{document}
+	\thispagestyle{empty}
+	
+	
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[blue,line width=6pt]
+		($(current page.north west)+(1.2cm,-1.2cm)$) rectangle
+		($(current page.south east)+(-1.2cm,1.2cm)$);
+		\draw[black,line width=0.5pt]
+		($(current page.north west)+(1.4cm,-1.4cm)$) rectangle
+		($(current page.south east)+(-1.4cm,1.4cm)$);
+	\end{tikzpicture}
+	
+	
+	\vspace*{-1cm} 
+	\begin{center}
+		\begin{tabular}{m{0.40\textwidth} m{0.15\textwidth} m{0.40\textwidth}}
+		
+			\centering\small
+			RÉPUBLIQUE DU CAMEROUN\\
+			\textit{Paix -- Travail -- Patrie}\\
+			******\\
+			MINISTÈRE DE L'ENSEIGNEMENT SUPÉRIEUR\\
+			******\\
+			\textbf{UNIVERSITÉ DE YAOUNDÉ I}\\
+			******\\
+			\textbf{ÉCOLE NATIONALE SUPÉRIEURE POLYTECHNIQUE}\\
+			******\\
+			DÉPARTEMENT DE GÉNIE INFORMATIQUE\\
+            ******\\
+			&
+		
+			\centering
+			\raisebox{0.5cm}{\includegraphics[height=3cm]{ENSPY.jpg}} 
+			&
+			
+			\centering\small
+			\hspace{0.2cm} 
+			REPUBLIC OF CAMEROON\\
+			\textit{Peace -- Work -- Fatherland}\\
+			******\\
+			MINISTRY OF HIGHER \\
+            EDUCATION\\
+			******\\
+			\textbf{UNIVERSITY OF YAOUNDE I}\\
+			******\\
+			\textbf{NATIONAL ADVANCED SCHOOL OF ENGINEERING}\\
+			******\\
+			COMPUTER ENGINEERING DEPARTMENT\\
+            ******\\
+		\end{tabular}
+	\end{center}
+	
+
+	\vspace{0.5cm}
+	\begin{center}
+		\fcolorbox{black}{white}{%
+			\parbox{0.85\textwidth}{%
+				\vspace{0.4cm}
+				\centering
+				\bfseries\fontsize{21pt}{23pt}\selectfont
+				INTRODUCTION AUX TECHNIQUES\\
+				D'INVESTIGATION NUMÉRIQUE
+				\vspace{0.4cm}
+		}}
+	\end{center}
+	
+
+	\vspace{0.8cm}
+	\begin{center}
+		\fcolorbox{black}{blue!40!blue}{%
+			\parbox{0.8\textwidth}{%
+				\vspace{0.5cm}
+				\centering
+				\color{white}\bfseries\fontsize{22pt}{28pt}\selectfont
+				RECONSTITUTION DES ÉLÉMENTS  TECHNIQUES DE L'ORDONNANCE DE RENVOI DE JPAB:AFFAIRE MARTINEZ ZOGO
+				\vspace{0.5cm}
+		}}
+	\end{center}
+	
+	
+	\vspace{1.5cm}
+	\begin{center}
+			\fontsize{15pt}{20pt}\selectfont
+            \textit{Rédigé par}\\
+            \textbf{MENGUE BISSA MARGUERITE}\\
+            \textit{Matricule : \textbf{22P064}}
+	\end{center}
+	
+	\vspace{1.5cm}
+	\begin{center}
+			\fontsize{15pt}{20pt}\selectfont
+            \textit{Sous la supervision de}\\
+            \textbf{Mr Thierry MINKA}\\
+	\end{center}
+	
+
+	\vspace{1cm}
+	\begin{center}
+		\fcolorbox{black}{blue!10!blue}{%
+			\parbox{0.4\textwidth}{%
+				\vspace{0.3cm}
+				\centering
+				\color{white}\bfseries\fontsize{10pt}{10pt}\selectfont
+				Année académique 2025/2026
+				\vspace{0.2cm}
+		}}
+	\end{center}
+	
+
+
+
+\vfill
+\pagestyle{fancy}
+\newpage
+\pagestyle{fancy}
+
+\tableofcontents
+\newpage
+
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+L’investigation numérique judiciaire est devenue un pilier incontournable de la justice moderne, particulièrement dans les affaires sensibles impliquant des acteurs étatiques ou des journalistes d’investigation. L’affaire \textbf{Martinez Zogo}, journaliste camerounais assassiné dans des circonstances suspectes, illustre la nécessité d’une analyse approfondie des traces numériques pour reconstituer la vérité.La présente étude vise à reconstituer, sous l’angle technique, les éléments numériques qui ont soutenu la décision du magistrat instructeur. Elle s’appuie sur les communications électroniques, données de géolocalisation, supports saisis, et recherches OSINT. Ce travail permet de montrer comment la combinaison de la technique et du droit peut transformer des suspicions en certitudes probatoires.Le rapport est structuré en cinq grandes parties : 
+\begin{itemize}
+    \item Le adre juridique et procédural de l’investigation numérique ;
+    \item L'dentification et reconstitution des éléments numériques ;
+    \item L'analyse et corrélation des preuves ;
+    \item L'évaluation critique et recommandations techniques ;
+    \item La conclusion sur l’importance stratégique des preuves numériques.
+\end{itemize}
+
+\chapter{Cadre juridique et procédural de l’investigation numérique judiciaire}
+
+\section{Fondements légaux et normatifs}
+
+Le traitement d’une affaire sensible comme celle-ci repose sur une combinaison des textes suivants : 
+\begin{itemize}
+    \item Le code de Procédure Pénale camerounais (articles relatifs à la preuve) ;
+    \item La loi n°2010/012 du 21 décembre 2010 relative à la cybersécurité et à la cybercriminalité ;
+    \item La loi n°2010/013 régissant les communications électroniques ;
+    \item Les normes ISO/IEC 27037 (identification, préservation et collecte des preuves numériques) ;
+    \item Les normes ISO/IEC 27041 (évaluation des processus d’investigation numérique).
+\end{itemize}
+
+Ces textes encadrent la collecte, l’authentification et la présentation des preuves numériques tout en protégeant les droits des citoyens et la confidentialité des sources journalistiques.
+
+\section{Rôle de l’expert judiciaire numérique}
+
+L’expert agit comme interface entre les données techniques et le magistrat. Ses missions principales sont : 
+\begin{itemize}
+    \item Identifier toutes les sources numériques pertinentes : téléphones, ordinateurs, serveurs, systèmes cloud ;
+    \item Assurer la chaîne de custodie et l’intégrité des preuves (hash cryptographiques, scellés) ;
+    \item Réaliser des copies forensiques certifiées conformes ;
+    \item Corréler les artefacts numériques avec les événements physiques et humains ;
+    \item Rédiger un rapport détaillé et compréhensible pour le magistrat.
+\end{itemize}
+
+\section{Spécificités procédurales dans l’affaire Martinez Zogo}
+
+L’enquête a nécessité : 
+\begin{itemize}
+    \item La coordination entre le magistrat, la police judiciaire et les opérateurs télécoms ;
+    \item Saisies et analyses de smartphones, ordinateurs et supports externes ;
+    \item L'analyse des communications en ligne et réseaux sociaux ;
+    \item La reconstitution de la chronologie des événements grâce aux données numériques.
+\end{itemize}
+
+\chapter{L'identification et la reconstitution des éléments numériques}
+
+\section{Les communications électroniques}\
+
+Pour établir la matérialité des menaces et de la surveillance il a fallu : 
+\begin{itemize}
+    \item Les elevés téléphoniques détaillés (CDR) ;
+    \item Les logs de messageries sécurisées (WhatsApp, Telegram, Signal) ;
+    \item Les emails et correspondances internes ;
+    \item l'analyse des échanges suspects ou effacés.
+\end{itemize}
+
+\section{La géolocalisation et la mobilité}\
+
+Les données numériques ont permis de reconstituer la présence des acteurs à des moments précis : 
+\begin{itemize}
+    \item Les GPS et Cell ID pour téléphones et véhicules ;
+    \item Les métadonnées EXIF pour photos ;
+    \item L'horodatage des messages et fichiers.
+\end{itemize}
+
+\section{Les supports saisis et le traitement forensique}\
+
+Les supports saisis incluent :
+\begin{itemize}
+ \item Les téléphones;
+  \item Les ordinateurs; 
+   \item Les disques durs, clés USB;  
+ \item L’extraction a été effectuée via \textit{FTK Imager, EnCase et Autopsy}. 
+ \end{itemize}\
+Chaque image a été vérifiée avec un hash MD5/SHA-256 pour garantir son intégrité.
+
+\section{Les systèmes institutionnels et OSINT}
+Nous avons:
+\begin{itemize}
+    \item L'analyse des journaux d’accès et des emails internes ;
+    \item Les recherches OSINT : La validation des publications en ligne,la  chronologie des événements, la vérification de l’authenticité ;
+    \item La corrélation avec les preuves physiques et les témoignages.
+\end{itemize}
+
+\chapter{L'analyse et la corrélation des preuves}
+
+\section{La méthodologie d’exploitation}
+La méthode utilisée est la suivante:
+\begin{enumerate}
+    \item La collecte légale des preuves numériques ;
+    \item La préservation et duplication sous scellés ;
+    \item L'extraction ciblée des artefacts pertinents ;
+    \item La corrélation temporelle, spatiale et logique ;
+    \item La rédaction d’un rapport technique pour le magistrat.
+\end{enumerate}
+
+\section{Corrélations temporelles et spatiales}
+
+La reconstitution de la timeline numérique a permis de relier : 
+\begin{itemize}
+    \item Les messages et appels à des heures précises ;
+    \item Les déplacements de Martinez Zogo ou des suspects ;
+    \item l'exécution des ordres et actions suspectes.
+\end{itemize}
+
+\section{La détection de les falsifications}
+
+Les outils forensiques ont identifié : 
+\begin{itemize}
+    \item Les éffacements volontaires de messages ;
+    \item Les altérations d’horodatage ;
+    \item La suppression de fichiers et tentatives de dissimulation.
+\end{itemize}
+
+\section{L'analyse des métadonnées et l'attribution}\
+
+L’étude des métadonnées (\textit{date, auteur, appareil utilisé}) a permis d’identifier les auteurs et les circuits décisionnels, renforçant la crédibilité des preuves.
+
+\chapter{L'évaluation critique et les recommandations techniques}
+
+\section{La robustesse et les limites}
+
+\begin{itemize}
+    \item Les points forts : la traçabilité, la corrélation multicanal, la standardisation des outils ;
+    \item Les limites :l' accès restreint aux données télécoms, les altérations possibles, la formation limitée.
+\end{itemize}
+
+\section{Les Recommandations}
+Il faut:
+\begin{enumerate}
+    \item Créer un pôle national de criminalistique numérique ;
+    \item Former magistrats et officiers d’enquête à la preuve électronique ;
+    \item Renforcer la collaboration avec l’ANTIC ;
+    \item Mettre en place une base de données probatoire sécurisée par blockchain ;
+    \item Certifier les laboratoires judiciaires selon ISO 27037.
+\end{enumerate}
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}\
+
+L’affaire Martinez Zogo démontre l’importance stratégique de la preuve numérique dans les enquêtes contemporaines.  
+Grâce à l’expertise numérique, le magistrat a pu transformer des suspicions en certitudes probatoires, sécuriser les preuves et établir une chronologie fiable.  
+La justice du XXI\textsuperscript{e} siècle repose désormais autant sur les logs, les métadonnées et les traces numériques que sur le témoignage humain.
+
+\end{document}
+
+\end{document}
