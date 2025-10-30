@@ -1,0 +1,309 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french,english]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2.3cm}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows.meta}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+
+\geometry{a4paper, margin=1.8cm}
+
+\fancyhead[L]{Investigation Numérique}
+\fancyhead[R]{\textit{MENGUE BISSA}}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\geometry{left=18mm,right=18mm,top=18mm,bottom=18mm}
+
+\begin{document}
+	\thispagestyle{empty}
+	
+	
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[blue,line width=6pt]
+		($(current page.north west)+(1.2cm,-1.2cm)$) rectangle
+		($(current page.south east)+(-1.2cm,1.2cm)$);
+		\draw[black,line width=0.5pt]
+		($(current page.north west)+(1.4cm,-1.4cm)$) rectangle
+		($(current page.south east)+(-1.4cm,1.4cm)$);
+	\end{tikzpicture}
+	
+	
+	\vspace*{-1cm} 
+	\begin{center}
+		\begin{tabular}{m{0.40\textwidth} m{0.15\textwidth} m{0.40\textwidth}}
+		
+			\centering\small
+			RÉPUBLIQUE DU CAMEROUN\\
+			\textit{Paix -- Travail -- Patrie}\\
+			******\\
+			MINISTÈRE DE L'ENSEIGNEMENT SUPÉRIEUR\\
+			******\\
+			\textbf{UNIVERSITÉ DE YAOUNDÉ I}\\
+			******\\
+			\textbf{ÉCOLE NATIONALE SUPÉRIEURE POLYTECHNIQUE}\\
+			******\\
+			DÉPARTEMENT DE GÉNIE INFORMATIQUE\\
+            ******\\
+			&
+		
+			\centering
+			\raisebox{0.5cm}{\includegraphics[height=3cm]{ENSPY.jpg}} 
+			&
+			
+			\centering\small
+			\hspace{0.2cm} 
+			REPUBLIC OF CAMEROON\\
+			\textit{Peace -- Work -- Fatherland}\\
+			******\\
+			MINISTRY OF HIGHER \\
+            EDUCATION\\
+			******\\
+			\textbf{UNIVERSITY OF YAOUNDE I}\\
+			******\\
+			\textbf{NATIONAL ADVANCED SCHOOL OF ENGINEERING}\\
+			******\\
+			COMPUTER ENGINEERING DEPARTMENT\\
+            ******\\
+		\end{tabular}
+	\end{center}
+	
+
+	\vspace{0.5cm}
+	\begin{center}
+		\fcolorbox{black}{white}{%
+			\parbox{0.85\textwidth}{%
+				\vspace{0.4cm}
+				\centering
+				\bfseries\fontsize{21pt}{23pt}\selectfont
+				INTRODUCTION AUX TECHNIQUES\\
+				D'INVESTIGATION NUMÉRIQUE
+				\vspace{0.4cm}
+		}}
+	\end{center}
+	
+
+	\vspace{0.8cm}
+	\begin{center}
+		\fcolorbox{black}{blue!40!blue}{%
+			\parbox{0.8\textwidth}{%
+				\vspace{0.5cm}
+				\centering
+				\color{white}\bfseries\fontsize{22pt}{28pt}\selectfont
+				RAPPORT DU LAB 1
+				\vspace{0.5cm}
+		}}
+	\end{center}
+	
+	
+	\vspace{1.5cm}
+	\begin{center}
+			\fontsize{15pt}{20pt}\selectfont
+            \textit{Rédigé par}\\
+            \textbf{MENGUE BISSA MARGUERITE}\\
+            \textit{Matricule : \textbf{22P064}}
+	\end{center}
+	
+	\vspace{1.5cm}
+	\begin{center}
+			\fontsize{15pt}{20pt}\selectfont
+            \textit{Sous la supervision de}\\
+            \textbf{Mr Thierry MINKA}\\
+	\end{center}
+	
+
+	\vspace{1cm}
+	\begin{center}
+		\fcolorbox{black}{blue!10!blue}{%
+			\parbox{0.4\textwidth}{%
+				\vspace{0.3cm}
+				\centering
+				\color{white}\bfseries\fontsize{10pt}{10pt}\selectfont
+				Année académique 2025/2026
+				\vspace{0.2cm}
+		}}
+	\end{center}
+
+
+\pagestyle{fancy}
+
+% Sections en chiffres romains avec point
+\renewcommand{\thesection}{\Roman{section}.}  
+
+% Sous-sections en I.1. avec point à la fin
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
+
+% Supprime l’espace entre le numéro et le titre
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname}
+\makeatother
+
+\begin{document}
+
+\tableofcontents
+\newpage
+
+\chapter*{INTRODUCTION}
+\addcontentsline{toc}{chapter}{INTRODUCTION}\
+
+L’objectif du Lab 1 est de permettre aux étudiants de concevoir et de configurer un environnement réseau complexe et sécurisé à l’aide de GNS3. Ce projet consiste à mettre en place une architecture complète intégrant un poste client sous Windows, une zone démilitarisée (DMZ) hébergeant un serveur web sous Linux, un pare-feu assurant la sécurité des échanges, ainsi qu’un routeur chargé de la connectivité entre les différentes zones. Ce laboratoire vise à mettre en pratique les principes essentiels de la segmentation réseau, de l’isolation des services critiques et du contrôle du trafic inter-réseaux. Tout au long de ce document, chaque étape de la mise en œuvre sera présentée en détail afin de conduire l’infrastructure jusqu’à un état pleinement fonctionnel et opérationnel.
+\newpage
+
+\section{CONCEPTION}
+
+\subsection{Composition de l’architecture}
+
+Notre infrastructure réseau se compose des éléments suivants:
+
+\begin{itemize}
+    \item \textbf{Routeur} : il assure la connexion du réseau interne à l’extérieur (\textit{Internet}).
+    \item \textbf{Pare-feu FortiGate} : placé en frontière, il protège le réseau interne et contrôle les flux entre \textit{Internet}, la \textbf{DMZ} et le réseau local.
+    \item \textbf{DMZ (zone démilitarisée)} : elle contient un poste de travail exécutant \textit{Ubuntu}, hébergeant une application web accessible depuis l’extérieur comme depuis l’intérieur du réseau.
+    \item \textbf{Poste de travail sur le réseau local} : équipé de \textit{Windows 10} et d’un antivirus, ce poste contient environ 2 Go de données variées, incluant fichiers exécutables, documents \textit{Word}, \textit{PDF} et \textit{Excel}.
+\end{itemize}
+
+\subsection{Schéma de l’architecture}
+\includegraphics[height=9cm]{archi.png} 
+\subsection{Plan d’adressage sur GNS3}\
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Appareil} & \textbf{Interface} & \textbf{Adresse IP} & \textbf{Masque de sous-réseau} & \textbf{Passerelle} \\ \hline
+Win\_10\_Client1  & e0   & 192.168.1.6   & 255.255.255.0 & 192.168.1.7 (FW1) \\ \hline
+Win\_10\_Client2  & e0  & 172.126.3.3   & 255.255.255.0 & 172.126.3.4 (R1) \\ \hline
+Kali\_1           & e0   & 172.126.4.4   & 255.255.255.0 & 172.126.4.5 (R1) \\ \hline
+Svr\_Ubuntu\_1    & e0  & 192.168.5.2   & 255.255.255.0 & 192.168.5.1 (FW1) \\ \hline
+Routeur R1        & e0/0  & 192.168.2.8   & 255.255.255.0 & - \\ \hline
+Routeur R1        & e0/1  & 172.126.4.5   & 255.255.255.0 & - \\ \hline
+Routeur R1        & e0/2  & 172.126.3.4   & 255.255.255.0 & - \\ \hline
+Pare-feu FW1      & port1 & 192.168.2.7   & 255.255.255.0 & - \\ \hline
+Pare-feu FW1      & port2 & 192.168.1.7   & 255.255.255.0 & - \\ \hline
+Pare-feu FW1      & port3 & 192.168.5.1   & 255.255.255.0 & - \\ \hline
+\end{tabular}
+\caption{Plan d’adressage des machines et équipements réseau avec passerelles}
+\end{table}
+
+
+\section{DÉPLOIEMENT}\
+Pour la mise en place de notre infrastructure réseau, nous avons utilisé VMWare comme logiciel de virtualisation. Cela nous a permis de créer des machines virtuelles configurables et interconnectables facilement au sein de notre environnement réseau.
+
+\subsection{Machine virtuelle Windows 10}\
+
+Nous avons créé une machine virtuelle \textbf{Windows 10}, qui servira de poste client dans le réseau local. Les caractéristiques minimales configurées sont les suivantes :
+\begin{itemize}
+    \item Disque dur : 20 Go
+    \item Mémoire RAM : 2 Go
+\end{itemize}
+\includegraphics[height=9cm]{windo1.png} 
+Cette machine permettra de tester la connectivité avec le serveur ainsi que les autres machines du réseau.
+
+\subsection{Machine virtuelle Linux (serveur web)}\
+
+Pour la zone DMZ, nous avons créé une machine virtuelle \textbf{Ubuntu}, destinée à héberger le serveur web. Ses caractéristiques minimales sont :
+\begin{itemize}
+    \item Disque dur : 20 Go
+    \item Mémoire RAM : 2 Go
+\end{itemize}
+\includegraphics[height=9cm]{UBUN.png} 
+Cette machine sert à héberger notre \textbf{application web de comptabilité}, accessible depuis les postes clients du réseau interne.
+
+\subsection{Création de l’application web}\
+Nous avons développé une application web dédiée à la \textbf{gestion comptable}, permettant aux utilisateurs d’enregistrer et de consulter des transactions financières de manière sécurisée. L’application est déployée sur le serveur Ubuntu et est accessible via le navigateur des clients.
+\hspace{1.5 cm}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{app.png}
+\end{figure}
+\subsection{Création de l’infrastructure}
+\subsubsection{Installation de GNS3}
+L’installation de GNS3 s’est faite en deux temps:
+\begin{itemize}
+\item Installation de la machine virtuelle de GNS3
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{gns.png}
+ \end{figure}  
+
+\item Installation et configuration du pare-feu Fortigate:
+Dans notre architecture, nous avons choisi d’utiliser un pare-feu à notre portée : Fortigate ;la version 7.4.4.Ici il est question de suivre les étapes pas à pas. A la fin du chargement, le pare-feu va redémarrer et l’interface du LAN par défaut  va être attribuée de manière statique à      l’adresse : 192.168.1.7/24.Il sera question par la suite de se connecter à l’interface graphique via la vm Windows pour assigner les interfaces DMZ et WAN afin de permettre à notre architecture de fonctionner.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{forti.png}
+ \end{figure}
+\end{itemize}
+\section{RÉSULTATS ET ANALYSE}
+\subitem Adressage de la machine Windows et test de ping
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{config.png}
+ \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{win1.png}
+ \end{figure}
+
+\subitem Adressage de la machine Linux et test de ping
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{ub.png}
+ \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{ubu.png}
+ \end{figure}\
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{conf g.png}
+ \end{figure}\
+
+Le test de connectivité révèle que le ping fonctionne normalement depuis Ubuntu vers toutes les machines Windows, mais que, dans le sens inverse, depuis Windows vers Ubuntu, deux requêtes échouent avant que les suivantes aboutissent. Ce comportement indique que la connectivité réseau est globalement opérationnelle, mais qu’un délai initial affecte la réponse d’Ubuntu. Les causes les plus probables sont la résolution ARP initiale, un filtrage partiel des paquets ICMP par le pare-feu d’Ubuntu (ufw ou iptables), ou encore un léger délai introduit par un environnement virtualisé ou une configuration réseau en mode pont/NAT. Après la première communication établie, les réponses deviennent normales, ce qui confirme qu’il ne s’agit pas d’une perte de connectivité, mais d’un léger retard lors de la première phase d’échange réseau.
+\subsection{Observation des communications}\
+Les communications montrent que les échanges réseau entre les machines sont globalement établis correctement, mais qu’il existe un léger décalage dans la phase initiale de communication lorsque Windows interroge Ubuntu. Ce décalage, visible à travers les deux premiers délais dépassés, traduit un temps d’initialisation de la communication souvent lié à la découverte de l’adresse MAC (résolution ARP) ou à la levée d’un filtrage temporaire par le pare-feu d’Ubuntu. Une fois cette phase passée, les échanges ICMP se déroulent normalement, ce qui confirme que la liaison physique et logique entre les deux hôtes est stable et fonctionnelle.
+\subsection{Analyse du comportement réseau}
+\
+L'analyse du comportement réseau met en évidence les éléments suivants :
+
+\begin{itemize}
+    \item \textbf{Latence :} Une fois la communication établie, la latence observée est normale et stable. Les réponses ICMP sont reçues sans perte après les deux premières requêtes.
+    
+    \item \textbf{Délai initial :} Deux requêtes échouent au début du ping depuis Windows vers Ubuntu. Ce délai correspond à une phase d’initialisation du lien, souvent liée à la \textbf{résolution ARP} (remplissage de la table ARP lors du premier contact) ou à une légère temporisation du système.
+    
+    \item \textbf{Filtrage :} Il est possible qu’un \textbf{pare-feu} (UFW ou iptables sur Ubuntu) limite temporairement les paquets ICMP entrants. De même, certaines règles de sécurité ou antivirus sur Windows peuvent introduire un filtrage sélectif.
+    
+    \item \textbf{Virtualisation ou économie d’énergie :} Si Ubuntu fonctionne dans un environnement virtualisé ou si la carte réseau gère des modes d’économie d’énergie, un court délai d’activation de l’interface réseau peut également expliquer les deux premières pertes.
+    
+    
+     
+Le comportement observé traduit un réseau fonctionnel, mais avec une légère latence d’initialisation. Après établissement de la communication, les échanges sont stables et continus, confirmant l’absence de perte de connectivité durable.
+\end{itemize}
+
+
+\chapter*{CONCLUSION}
+\addcontentsline{toc}{chapter}{CONCLUSION}
+Nous voici arrivés au terme de notre lab, le ping passe entre les différentes machines et
+l’application web est accessible depuis la vm Windows.
+
+\end{document}
