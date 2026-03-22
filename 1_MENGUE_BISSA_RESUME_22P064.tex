@@ -1,0 +1,213 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french,english]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2.3cm}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows.meta}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+
+\geometry{a4paper, margin=1.8cm}
+
+\fancyhead[L]{Investigation Numérique}
+\fancyhead[R]{\textit{MENGUE BISSA}}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\geometry{left=18mm,right=18mm,top=18mm,bottom=18mm}
+
+\begin{document}
+	\thispagestyle{empty}
+	
+	
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw[blue,line width=6pt]
+		($(current page.north west)+(1.2cm,-1.2cm)$) rectangle
+		($(current page.south east)+(-1.2cm,1.2cm)$);
+		\draw[black,line width=0.5pt]
+		($(current page.north west)+(1.4cm,-1.4cm)$) rectangle
+		($(current page.south east)+(-1.4cm,1.4cm)$);
+	\end{tikzpicture}
+	
+	
+	\vspace*{-1cm} 
+	\begin{center}
+		\begin{tabular}{m{0.40\textwidth} m{0.15\textwidth} m{0.40\textwidth}}
+		
+			\centering\small
+			RÉPUBLIQUE DU CAMEROUN\\
+			\textit{Paix -- Travail -- Patrie}\\
+			******\\
+			MINISTÈRE DE L'ENSEIGNEMENT SUPÉRIEUR\\
+			******\\
+			\textbf{UNIVERSITÉ DE YAOUNDÉ I}\\
+			******\\
+			\textbf{ÉCOLE NATIONALE SUPÉRIEURE POLYTECHNIQUE}\\
+			******\\
+			DÉPARTEMENT DE GÉNIE INFORMATIQUE\\
+            ******\\
+			&
+		
+			\centering
+			\raisebox{0.5cm}{\includegraphics[height=3cm]{ENSPY.jpg}} 
+			&
+			
+			\centering\small
+			\hspace{0.2cm} 
+			REPUBLIC OF CAMEROON\\
+			\textit{Peace -- Work -- Fatherland}\\
+			******\\
+			MINISTRY OF HIGHER \\
+            EDUCATION\\
+			******\\
+			\textbf{UNIVERSITY OF YAOUNDE I}\\
+			******\\
+			\textbf{NATIONAL ADVANCED SCHOOL OF ENGINEERING}\\
+			******\\
+			COMPUTER ENGINEERING DEPARTMENT\\
+            ******\\
+		\end{tabular}
+	\end{center}
+	
+
+	\vspace{0.5cm}
+	\begin{center}
+		\fcolorbox{black}{white}{%
+			\parbox{0.85\textwidth}{%
+				\vspace{0.4cm}
+				\centering
+				\bfseries\fontsize{21pt}{23pt}\selectfont
+			TECHNIQUES D'INVESTIGATION NUMÉRIQUE AVANCEE
+				\vspace{0.4cm}
+		}}
+	\end{center}
+	
+
+	\vspace{0.8cm}
+	\begin{center}
+		\fcolorbox{black}{blue!40!blue}{%
+			\parbox{0.8\textwidth}{%
+				\vspace{0.5cm}
+				\centering
+				\color{white}\bfseries\fontsize{22pt}{28pt}\selectfont
+			RESUME METHODOLOGIE INVESTIGATION
+				\vspace{0.5cm}
+		}}
+	\end{center}
+	
+	
+	\vspace{1.5cm}
+	\begin{center}
+			\fontsize{15pt}{20pt}\selectfont
+            \textit{Rédigé par}\\
+            \textbf{MENGUE BISSA MARGUERITE}\\
+            \textit{Matricule : \textbf{22P064}}
+	\end{center}
+	
+	\vspace{1.5cm}
+	\begin{center}
+			\fontsize{15pt}{20pt}\selectfont
+            \textit{Sous la supervision de}\\
+            \textbf{Mr Thierry MINKA}\\
+	\end{center}
+	
+
+	\vspace{1cm}
+	\begin{center}
+		\fcolorbox{black}{blue!10!blue}{%
+			\parbox{0.4\textwidth}{%
+				\vspace{0.3cm}
+				\centering
+				\color{white}\bfseries\fontsize{10pt}{10pt}\selectfont
+				Année académique 2025/2026
+				\vspace{0.2cm}
+		}}
+	\end{center}
+	
+	\vfill
+	\pagestyle{fancy}
+    \newpage
+    \pagestyle{fancy}
+	
+	{\Large
+		
+		{\Large
+
+}
+\begin{document}
+
+\section*{Résumé : Processus Investigatif Universel (PIU)}
+
+Le Processus Investigatif Universel (PIU) désigne un cadre méthodologique destiné à encadrer la réalisation d’investigations de manière structurée et méthodique. 
+
+\section*{Objectifs du processus investigatif}
+
+Le PIU poursuit plusieurs objectifs complémentaires qui orientent l’ensemble de la démarche investigatrice.En premier lieu, il cherche à établir une représentation objective des faits observés grâce à une documentation précise et contrôlable. En second lieu, il vise la préservation de la valeur probante des éléments recueillis afin d’en garantir l’authenticité et l’exploitation juridique éventuelle.Il impose également une traçabilité complète des actions réalisées, permettant ainsi un examen ou un audit ultérieur des opérations effectuées. Enfin, il ambitionne de produire des conclusions argumentées et solides, capables de résister à une analyse critique ou à une contradiction formelle. Cette méthodologie demeure adaptable et peut être modulée selon le niveau de sensibilité de la situation étudiée. Trois degrés d’application peuvent ainsi être envisagés : minimal, standard ou avancé, en fonction des enjeux techniques, financiers ou juridiques.
+
+\section*{Architecture générale du processus}
+
+Le PIU repose sur une organisation séquentielle composée de cinq phases principales regroupant dix-sept étapes opérationnelles. Trois points de validation, appelés \textit{Quality Gates}, jalonnent le déroulement du processus afin de contrôler la qualité des travaux réalisés avant la poursuite des opérations.
+
+Les différentes phases sont les suivantes :
+
+\begin{enumerate}
+\item Initialisation et cadrage
+\item Collecte et conservation des preuves
+\item Analyse investigatrice
+\item Formalisation et communication des résultats
+\item Suivi post-investigation
+\end{enumerate}
+
+Chaque phase contribue à assurer une progression logique et cohérente de l’enquête.
+
+\section*{Phase 1 : Initialisation et cadrage}
+
+La première phase consiste à examiner la demande d’investigation afin d’en évaluer la pertinence et la faisabilité. Elle débute par une analyse préliminaire permettant d’identifier la nature des faits signalés, les enjeux associés ainsi que les contraintes juridiques et techniques éventuelles.
+
+Une décision d’engagement est ensuite prise par une autorité compétente, laquelle définit le cadre de l’intervention, les ressources mobilisées, les délais prévisionnels et la répartition des responsabilités.
+
+Enfin, une planification opérationnelle est élaborée afin de structurer l’action investigatrice. Celle-ci précise les objectifs poursuivis, les méthodes envisagées ainsi que le calendrier d’exécution.
+
+Un premier point de contrôle (\textit{Quality Gate 1}) valide la conformité des conditions nécessaires avant le lancement effectif de l’enquête.
+
+\section*{Phase 2 : Acquisition et préservation des preuves}
+
+Cette phase concerne la collecte méthodique des éléments susceptibles d’éclairer les faits étudiés. Les informations peuvent provenir de sources diverses telles que des documents, des supports numériques, des témoignages ou des observations directes. Par ailleurs, l’identification des parties prenantes constitue une étape essentielle du processus. Elle inclut les personnes directement impliquées, les témoins potentiels, les experts ainsi que les autorités concernées. Le \textit{Quality Gate 2} permet alors de vérifier que l’ensemble probatoire est complet, traçable et exploitable sur le plan juridique.
+
+\section*{Phase 3 : Investigation analytique}
+
+Elle vise à interpréter les informations recueillies afin de comprendre les événements étudiés et d’évaluer différentes explications possibles. Les témoignages sont recueillis à l’aide d’entretiens structurés ou semi-structurés, puis analysés afin d’identifier les convergences et les divergences entre les déclarations. Inspirée de la philosophie scientifique de Karl Popper, une démarche de falsification active est également mise en œuvre. Elle consiste à rechercher volontairement des éléments susceptibles d’infirmer une hypothèse afin d’en tester la robustesse. Les conclusions provisoires sont ensuite soumises à des mécanismes de validation tels que la revue par des pairs, l’expertise indépendante ou l’analyse contradictoire. Le \textit{Quality Gate 3} confirme alors la solidité et la documentation suffisante des résultats obtenus.
+
+\section*{Phase 4 : Formalisation et transmission}
+
+À l’issue des analyses, les résultats sont présentés dans un rapport d’investigation structuré.
+
+Ce document comprend généralement une synthèse exécutive résumant les conclusions principales, un rapport technique détaillant la méthodologie et les analyses réalisées, ainsi que des annexes regroupant les éléments probatoires et les témoignages.
+
+\section*{Phase 5 : Suivi post-transmission}
+
+La phase finale concerne les actions menées après la remise du rapport. Elle peut inclure la préparation à d’éventuelles contestations, l’analyse de contre-expertises ou la conservation des preuves dans le cadre d’une procédure judiciaire.
+
+\end{document}
+
+
